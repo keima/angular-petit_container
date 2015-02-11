@@ -1,0 +1,22 @@
+{
+  "name": "angular-petit_container",
+  "version": "0.0.1",
+  "homepage": "https://github.com/keima/angular-petit_container",
+  "authors": [
+    "Kouta Imanaka <keima@p-side.net>"
+  ],
+  "private": true,
+  "dependencies": {
+    "angular": "~1.3.13",
+    "restangular": "~1.4.0",
+    "angular-material": "~0.7.1",
+    "ionicons": "~2.0.1"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
