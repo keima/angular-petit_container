@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module("MyApp", ["ngMaterial", "restangular"])
-  //.constant('BaseUrl', 'https://arcane-harbor-6152.herokuapp.com')
-  .constant('BaseUrl', 'http://localhost:5000')
+  .constant('BaseUrl', 'https://arcane-harbor-6152.herokuapp.com')
+  //.constant('BaseUrl', 'http://localhost:5000')
   .config(function (RestangularProvider, BaseUrl) {
     RestangularProvider.setBaseUrl(BaseUrl + "/api");
     RestangularProvider.setDefaultHttpFields({withCredentials: true});
@@ -23,7 +23,6 @@ angular.module("MyApp", ["ngMaterial", "restangular"])
       // TODO: use promise
       Restangular.all("store").all("favs").getList()
         .then(function (result) {
-          console.log(result);
           self.favedItems = result;
 
           self.favedItems.forEach(function (favedItem) {
@@ -33,9 +32,6 @@ angular.module("MyApp", ["ngMaterial", "restangular"])
               }
             });
           });
-
-          console.log(self.favedItems)
-
         });
 
     });
@@ -79,9 +75,6 @@ angular.module("MyApp", ["ngMaterial", "restangular"])
         .then(function (result) {
           console.log(result);
         });
-
-      console.log(self.favedItems)
-
     }
 
   })
