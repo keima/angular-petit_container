@@ -1,0 +1,50 @@
+[
+  {
+    "id": 0,
+    "name": "Apple"
+  },
+  {
+    "id": 1,
+    "name": "Blackberry"
+  },
+  {
+    "id": 2,
+    "name": "Cupcake"
+  },
+  {
+    "id": 3,
+    "name": "Donut"
+  },
+  {
+    "id": 4,
+    "name": "Eclair"
+  },
+  {
+    "id": 5,
+    "name": "Froyo"
+  },
+  {
+    "id": 6,
+    "name": "Gingerbread"
+  },
+  {
+    "id": 7,
+    "name": "Honeycomb"
+  },
+  {
+    "id": 8,
+    "name": "IceCreamSandwich"
+  },
+  {
+    "id": 9,
+    "name": "Jellybean"
+  },
+  {
+    "id": 10,
+    "name": "Kitkat"
+  },
+  {
+    "id": 11,
+    "name": "Lollipop"
+  }
+]
