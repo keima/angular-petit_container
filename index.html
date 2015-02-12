@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head lang="ja">
+  <meta charset="UTF-8">
+  <title>ぷちこんてな</title>
+
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.css">
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+  <!-- endinject -->
+
+  <!-- inject:css -->
+  <!-- endinject -->
+</head>
+<body layout="column" ng-controller="MyCtrl as ctrl">
+
+<md-toolbar layout="row" class="md-default-theme">
+  <div class="md-toolbar-tools" layout="row" flex class="fill-height">
+    <h1>ぷちこんてな</h1>
+    <span flex></span>
+
+    <div>
+      <span ng-show="!ctrl.isLogin">
+        <a ng-href="{{ ctrl.loginPage }}">ログイン</a>
+      </span>
+      <span ng-show="ctrl.isLogin">
+        <a ng-href="{{ ctrl.loginPage }}">ログアウト</a>
+      </span>
+    </div>
+  </div>
+</md-toolbar>
+
+<md-content>
+  <md-list>
+    <md-item ng-repeat="item in ctrl.items" ng-click="ctrl.setFavs($index)">
+      <md-item-content>
+        <div class="md-tile-left" layout="row" layout-align="center center">
+          {{ item.id }}
+        </div>
+        <div class="md-tile-content">
+          <h3>{{item.name}}</h3>
+        </div>
+        <div class="md-tile-right" style="width: 50px">
+          <i class="ionicons ion-star" ng-show="item.isFaved"></i>
+        </div>
+      </md-item-content>
+    </md-item>
+  </md-list>
+</md-content>
+
+<!-- bower:js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/lodash/dist/lodash.compat.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/restangular/dist/restangular.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
+<!-- endinject -->
+
+<!-- inject:js -->
+<script src="js/main.js"></script>
+<!-- endinject -->
+
+</body>
+</html>
